@@ -1,0 +1,37 @@
+{% extends 'ht/base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block content %}
+<script>
+    function myFunction() {
+        alert('Result Out Now !');
+      }
+</script>
+<div class="container mx-auto bg-light">
+    <div class="mx-auto">
+        <table class="table table-striped my-5 bg-dark">
+            <thead>
+                <tr>
+                    <th> <div class="container text-danger">STATE</div></th>
+                  <th> <div class="container text-danger">RESULT</div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td><div class="text-light">ANDHRA PRADESH</div></td>
+                    <td> <div class="button" onclick="setTimeout(360000);">
+                        <a href="{% url 'ap' %}"  class="btn btn-warning text-mute rounded-circle" role="button" onclick="setTimeout(360000)">RESULT</a>
+                        </div> 
+                    </td>
+                </tr>
+                <tr>
+                    <td><div class="text-light">TELANGANA STATE</div></td>
+                    <td> <div class="button">
+                        <a href="{% url 'tel' %}"  class="btn btn-warning text-mute rounded-circle" role="button">RESULT</a>
+                        </div> 
+                    </td>
+                </tr>
+
+              </tbody>
+
+{% endblock %}

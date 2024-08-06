@@ -1,0 +1,35 @@
+{% extends 'ht/base.html' %}
+{% load static %}
+{% block title %}RESULT-TEL{% endblock %}
+{% block content %}
+<div class="container mx-auto bg-light">
+    <div class="mx-auto">
+        <table class="table table-striped my-5 bg-dark">
+            <thead>
+                <tr>
+                    <th> <div class="container text-danger">SYMBOL</div></th>
+                    <th> <div class="container text-danger">VOTES</div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td><div class="text-light">TOTAL PARTICIPANTS </div></td>
+                    <td> <div class="text-light">{{t}}</div></td>
+                </tr>
+                <tr>
+                  <td><img src="{% static 'image/trslogo.png' %}" class="rounded-circle "  alt="Logo" style="width:70px;"></td>
+                  <td> <div class="text-light">{{tr}}</div></td>
+                </tr>
+                <tr>
+                  <td><img src="{% static 'image/conlogo.png' %}" class="rounded-circle "  alt="Logo" style="width:70px;"></td>
+                  <td> <div class="text-light">{{co}}</div></td>
+                </tr>
+                <tr>
+                  <td><img src="{% static 'image/bjplogo.png' %}" class="rounded-circle "  alt="Logo" style="width:70px;"></td>
+                  <td> <div class="text-light">{{bj}}</div></td>
+                </tr>
+              </tbody>
+              <div class="card bg-success text-white">
+                <div class="card-body">{{re}}</div>
+              </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'ht/base.html' %}
+{% load static %}
+{% block title %}Successfully{% endblock %}
+{% block content %}
+<div class="container">
+    <h4>Thank You !</h4><br>
+    <div class="card bg-danger text-white">
+        <div class="card-body">But you Already voted !!</div>
+      </div>
+    <div class="mx-auto my-3">
+        <a href="{% url 'vot' %}" class="btn btn-info" role="button">Back</a>
+    </div>
+</div>
+{% endblock %}

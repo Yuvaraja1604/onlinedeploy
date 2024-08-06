@@ -1,0 +1,53 @@
+
+{% extends 'ht/base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block content %}
+<style>
+.body{
+        background-color:darkseagreen;
+    }
+</style>
+<div class="body">
+<div class="container my-5 mx-5 text-danger">
+    <h2>ANDHRA PRADESH STATE</h2>
+    <br>
+    <h4>SELECT</h4>
+   <div class="container mx-auto">
+    <div class="mx-auto">
+        <table class="table table-striped my-5">
+            <thead>
+                <tr>
+                    <th> <div class="container text-danger"> SYMBOL</div></th>
+                  <th> <div class="container text-danger">VOTE</div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td><img src="{% static 'image/tdlogo.jpg' %}" class="rounded-circle "  alt="Logo" style="width:70px;"></td>
+                    <td> <div class="button">
+                        <a href="{% url 'td' %}"  class="btn btn-warning text-mute rounded-circle" role="button">VOTE</a>
+                        </div> 
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'image/yslogo.jpg' %}" class="rounded-circle " alt="Logo" style="width:70px;">
+                    <td><div class="button">
+                        <a href="{% url 'ys' %}"  class="btn btn-success text-mute rounded-circle "   role="button">VOTE</a>
+                        </div> 
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="{% static 'image/palogo1.jpg' %}" class="rounded-circle " alt="Logo" style="width:70px;"></td>
+                        <td><div class="button">
+                            <a href="{% url 'pk' %}"  class="btn btn-danger text-mute rounded-circle" role="button">VOTE</a>
+                            </div> 
+                        </td>
+                    
+                </tr>
+              </tbody>
+        </table>
+    </div>
+</div>
+</div>
+{% endblock %}
